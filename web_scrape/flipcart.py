@@ -58,7 +58,7 @@ def get_rating(soup):
 def get_review_count(soup):
     try:
         review_count = soup.find("span", attrs={'class': '_2_R_DZ'}).text.split("&")[1]
-    except AttributeError:
+    except Exception:
         review_count = ""
     return review_count
 
